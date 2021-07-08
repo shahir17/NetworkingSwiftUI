@@ -3,16 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D192827E26974B5200116827 /* PhotoLoadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192827D26974B5200116827 /* PhotoLoadingError.swift */; };
+		D192828226975C4E00116827 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D192828126975C4E00116827 /* API.swift */; };
+		D19282892697701700116827 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = D19282882697701700116827 /* URLImageStore */; };
+		D192828B2697701700116827 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = D192828A2697701700116827 /* URLImage */; };
 		D1CCC60526974805006C1EFE /* NetworkingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCC60426974805006C1EFE /* NetworkingSwiftUIApp.swift */; };
 		D1CCC60726974805006C1EFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCC60626974805006C1EFE /* ContentView.swift */; };
 		D1CCC60926974808006C1EFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CCC60826974808006C1EFE /* Assets.xcassets */; };
 		D1CCC60C26974808006C1EFE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1CCC60B26974808006C1EFE /* Preview Assets.xcassets */; };
 		D1CCC61726974808006C1EFE /* NetworkingSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCC61626974808006C1EFE /* NetworkingSwiftUITests.swift */; };
 		D1CCC62226974808006C1EFE /* NetworkingSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCC62126974808006C1EFE /* NetworkingSwiftUIUITests.swift */; };
+		D1CCC63326974860006C1EFE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CCC63226974860006C1EFE /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D192827D26974B5200116827 /* PhotoLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLoadingError.swift; sourceTree = "<group>"; };
+		D192828126975C4E00116827 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		D1CCC60126974805006C1EFE /* NetworkingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CCC60426974805006C1EFE /* NetworkingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSwiftUIApp.swift; sourceTree = "<group>"; };
 		D1CCC60626974805006C1EFE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 		D1CCC61D26974808006C1EFE /* NetworkingSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CCC62126974808006C1EFE /* NetworkingSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingSwiftUIUITests.swift; sourceTree = "<group>"; };
 		D1CCC62326974808006C1EFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1CCC63226974860006C1EFE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D192828B2697701700116827 /* URLImage in Frameworks */,
+				D19282892697701700116827 /* URLImageStore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +105,9 @@
 		D1CCC60326974805006C1EFE /* NetworkingSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D1CCC63126974852006C1EFE /* View */,
+				D1CCC6302697484C006C1EFE /* ViewModel */,
+				D1CCC62F2697483B006C1EFE /* Model */,
 				D1CCC60426974805006C1EFE /* NetworkingSwiftUIApp.swift */,
 				D1CCC60626974805006C1EFE /* ContentView.swift */,
 				D1CCC60826974808006C1EFE /* Assets.xcassets */,
@@ -130,6 +143,30 @@
 			path = NetworkingSwiftUIUITests;
 			sourceTree = "<group>";
 		};
+		D1CCC62F2697483B006C1EFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1CCC63226974860006C1EFE /* Photo.swift */,
+				D192827D26974B5200116827 /* PhotoLoadingError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D1CCC6302697484C006C1EFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D192828126975C4E00116827 /* API.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D1CCC63126974852006C1EFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +183,10 @@
 			dependencies = (
 			);
 			name = NetworkingSwiftUI;
+			packageProductDependencies = (
+				D19282882697701700116827 /* URLImageStore */,
+				D192828A2697701700116827 /* URLImage */,
+			);
 			productName = NetworkingSwiftUI;
 			productReference = D1CCC60126974805006C1EFE /* NetworkingSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +258,9 @@
 				Base,
 			);
 			mainGroup = D1CCC5F826974805006C1EFE;
+			packageReferences = (
+				D19282872697701700116827 /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = D1CCC60226974805006C1EFE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CCC63326974860006C1EFE /* Photo.swift in Sources */,
 				D1CCC60726974805006C1EFE /* ContentView.swift in Sources */,
+				D192827E26974B5200116827 /* PhotoLoadingError.swift in Sources */,
+				D192828226975C4E00116827 /* API.swift in Sources */,
 				D1CCC60526974805006C1EFE /* NetworkingSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +627,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D19282872697701700116827 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D19282882697701700116827 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19282872697701700116827 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+		D192828A2697701700116827 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D19282872697701700116827 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D1CCC5F926974805006C1EFE /* Project object */;
 }
